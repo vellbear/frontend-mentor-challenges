@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="/dist/index.css">
+  <title>Frontend Mentor | Product preview card component</title>
+
+  <!--Google Fonts-->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,700&family=Montserrat:wght@500;700&display=swap"
+    rel="stylesheet">
+</head>
+<body class="flex flex-col items-center justify-center h-screen my-auto text-base font-montserrat bg-cream">
+  <!--Card-->
+  <div class="overflow-hidden grid tablet:grid-cols-2 tablet::max-h-[600px] tablet:max-w-[540px] mx-[1.25rem] bg-white rounded-[10px]">
+    <!--Product Image-->
+    <div>
+      <img class="tablet:hidden" src="./images/image-product-mobile.jpg" alt="image image-product-mobile">
+      <img class="hidden tablet:inline-block" src="./images/image-product-desktop.jpg" alt="image image-desktop-mobile">
+    </div>
+    <div class="py-[1.25rem]">
+      <!--Card Content-->
+      <div class="grid gap-[12px] px-[1.25rem]">
+        <span class="text-dark-grayish-blue text-sm font-medium tracking-widest">P E R F U M E</span>
+        <h2 class=" text-very-dark-blue font-fraunces text-4xl leading-none">Gabrielle Essence Eau De Parfum</h2>
+        <p class="text-dark-grayish-blue font-medium pt-[.25rem]">A floral, solar and voluptuous interpretation composed by Olivier Polge,
+          Perfumer-Creator for the House of CHANEL.</p>
+        <!--Price-->
+        <div class="flex gap-[1.25rem] pt-2 items-center">
+          <p class="text-dark-cyan font-fraunces text-4xl">$149.99</p>
+          <span class="text-dark-grayish-blue line-through">$169.99</span>
+        </div>
+        <!--Add to Cart Button-->
+        <button
+          class="bg-dark-cyan hover:bg-very-dark-cyan text-white font-medium flex gap-[.75rem] items-center justify-center rounded-lg h-12 w-full">
+          <img src="./images/icon-cart.svg" alt="icon-cart">
+          Add to Cart
+        </button>
+      </div>
+    </div> 
+  </div>
+
+  <div class="attribution text-center mt-4">
+    Challenge by <a class="text-blue-500 underline" href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a class="text-blue-500 underline" href="https://llxovell.github.io/my-portfolio/">Levell Mack</a>.
+  </div>
+</body>
+</html>
