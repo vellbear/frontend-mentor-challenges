@@ -1,6 +1,10 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  content: ["./src/**/*.{html,js}"],
+  content: [
+    "./src/**/*.{html,js}",
+    "./dist/**/*.{html,js}",
+    "./home/**/*.{html,js}",
+  ],
   theme: {
     screens: {
       tablet: "580px",
