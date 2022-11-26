@@ -17,7 +17,7 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Product Preview Card Component](https://llxovell.github.io/frontend-mentor-challenges/product-preview-card-component-main/home)
+- Solution URL: [Product Preview Card Component](https://llxovell.github.io/frontend-mentor-challenges/product-preview-card-component-main/docs)
 
 ## My process
 
