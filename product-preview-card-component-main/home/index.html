@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  <link rel="stylesheet" href="index.css">
+  <link rel="stylesheet" href="./index.css">
   <title>Product preview card component | Frontend Mentor | Levell Mack</title>
   <!--Google Fonts-->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -13,39 +13,38 @@
     href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,700&family=Montserrat:wght@500;700&display=swap"
     rel="stylesheet">
 </head>
-<body class="flex flex-col items-center justify-center h-screen text-base font-montserrat bg-cream">
+<body class="relative flex flex-col items-center justify-center h-screen text-normal font-montserrat font-medium bg-cream">
   <!--Card-->
-  <div class="overflow-hidden grid tablet:grid-cols-2 tablet:max-w-[540px] my-4 mx-[1.25rem] bg-white rounded-[10px]">
+  <main class="overflow-hidden grid tablet:max-h-[450px] tablet:grid-cols-2 tablet:max-w-[600px] mx-4 bg-white rounded-[10px]">
     <!--Product Image-->
     <div>
       <img class="tablet:hidden" src="./images/image-product-mobile.jpg" alt="image image-product-mobile">
       <img class="hidden tablet:inline-block" src="./images/image-product-desktop.jpg" alt="image image-desktop-mobile">
     </div>
-    <div class="py-[1.25rem]">
       <!--Card Content-->
-      <div class="grid gap-[12px] px-[1.25rem]">
-        <span class="text-dark-grayish-blue text-sm font-medium tracking-widest">P E R F U M E</span>
-        <h2 class=" text-very-dark-blue font-fraunces text-4xl leading-none">Gabrielle Essence Eau De Parfum</h2>
-        <p class="text-dark-grayish-blue font-medium pt-[.25rem]">A floral, solar and voluptuous interpretation composed by Olivier Polge,
+      <div class="grid p-6 gap-3 tablet:p-8 tablet:gap-5">
+        <span class="text-dark-grayish-blue text-small tracking-widest">P E R F U M E</span>
+        <h1 class=" text-very-dark-blue font-fraunces text-large leading-none">Gabrielle Essence Eau De Parfum</h1>
+        <p class="text-dark-grayish-blue pt-1">A floral, solar and voluptuous interpretation composed by Olivier Polge,
           Perfumer-Creator for the House of CHANEL.</p>
         <!--Price-->
-        <div class="flex gap-[1.25rem] pt-2 items-center">
-          <p class="text-dark-cyan font-fraunces text-4xl">$149.99</p>
+        <div class="flex items-center pt-3 gap-4">
+          <p class="text-dark-cyan font-fraunces text-large">$149.99</p>
           <span class="text-dark-grayish-blue line-through">$169.99</span>
         </div>
         <!--Add to Cart Button-->
         <button
-          class="bg-dark-cyan hover:bg-very-dark-cyan text-white font-medium flex gap-[.75rem] items-center justify-center rounded-lg h-12 w-full">
+          class="bg-dark-cyan hover:bg-very-dark-cyan text-white font-bold flex gap-3 items-center justify-center rounded-lg h-12 w-full">
           <img src="./images/icon-cart.svg" alt="icon-cart">
           Add to Cart
         </button>
       </div>
-    </div> 
-  </div>
+    </main>
   <!--Attribution-->
-  <div class="attribution text-center mt-4">
-    Challenge by <a class="text-blue-500 underline" href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+  <footer class="attribution text-small text-center -mt-[18px] pt-7">
+    Challenge by <a class="text-blue-500 underline" href="https://www.frontendmentor.io?ref=challenge"
+      target="_blank">Frontend Mentor</a>.
     Coded by <a class="text-blue-500 underline" href="https://llxovell.github.io/my-portfolio/">Levell Mack</a>.
-  </div>
+  </footer>
 </body>
 </html>

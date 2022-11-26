@@ -8,16 +8,11 @@ module.exports = {
   theme: {
     screens: {
       tablet: "580px",
-      desktop: "1440px",
     },
     fontSize: {
-      sm: "0.75rem",
-      base: "0.875rem",
-      xl: "1.093rem",
-      "2xl": "1.367rem",
-      "3xl": "1.708rem",
-      "4xl": "2.135rem",
-      "5xl": "2.670rem",
+      small: ".75rem",
+      normal: "0.875rem",
+      large: "2rem",
     },
     extend: {
       colors: {
