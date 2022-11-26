@@ -12,7 +12,7 @@ Each [Frontend Mentor](https://frontendmentor.io/challenges) challenge is caterg
 - [Advanced](https://www.frontendmentor.io/challenges?difficulties=4)
 - [Guru](https://www.frontendmentor.io/challenges?difficulties=5)
 
-I will seperate each challenge by both completion and difficulty based on this scaling.
+I will seperate each challenge by difficulty based on this scaling.
 
 # Links to Completed Challenges
 
