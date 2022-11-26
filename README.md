@@ -1,8 +1,11 @@
 # My Frontend Mentor Challenges
+
 This is where I will put my in progress, and completed, [Frontend Mentor](https://frontendmentor.io/challenges) challenges.
 
 # Challenge Difficulty
+
 Each [Frontend Mentor](https://frontendmentor.io/challenges) challenge is catergorized by difficulty level:
+
 - [Newbie](https://www.frontendmentor.io/challenges?difficulties=1)
 - [Junior](https://www.frontendmentor.io/challenges?difficulties=2)
 - [Intermediate](https://www.frontendmentor.io/challenges?difficulties=3)
@@ -12,4 +15,5 @@ Each [Frontend Mentor](https://frontendmentor.io/challenges) challenge is caterg
 I will seperate each challenge by both completion and difficulty based on this scaling.
 
 # Links to Completed Challenges
-I plan to post links for each completed challenge here.
+
+- [Product preview card component](https://llxovell.github.io/frontend-mentor-challenges/product-preview-card-component-main/home/)
