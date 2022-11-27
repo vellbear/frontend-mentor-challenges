@@ -6,47 +6,133 @@
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
   <link rel="stylesheet" href="index.css">
   <title>Frontend Mentor | Loopstudios landing page</title>
+  <!--Google Fonts-->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Alata&family=Josefin+Sans:wght@300&display=swap" rel="stylesheet">
 </head>
-<body>
-  About
-  Careers
-  Events
-  Products
-  Support
-
-  Immersive experiences that deliver
-
-  The leader in interactive VR
-
-  Founded in 2011, Loopstudios has been producing world-class virtual reality 
-  projects for some of the best companies around the globe. Our award-winning 
-  creations have transformed businesses through digital experiences that bind 
-  to their brand.
-
-  Our creations
-
-  See all
-
-  Deep earth
-  Night arcade
-  Soccer team VR
-  The grid
-  From up above VR
-  Pocket borealis
-  The curiosity
-  Make it fisheye
-
-  About
-  Careers
-  Events
-  Products
-  Support
-
-  © 2021 Loopstudios. All rights reserved.
-
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </div>
+<body class="font-alata font-normal text-normal">
+  <main>
+    <!--Hero-->
+    <header class="grid">
+      <!--Background Image-->
+      <img class="grid col-start-1 row-start-1 sm:hidden" src="./images/mobile/image-hero.jpg" alt="hero-mobile">
+      <div class="grid col-start-1 row-start-1 m-6">
+        <!--Navbar-->
+        <div class="grid col-start-1 row-start-1 mt-6">
+          <nav>
+            <!--Logo-->
+            <div>
+              <img class="h-[24px] sm:h-auto" src="./images/logo.svg" alt="logo">
+            </div>
+            <!--Nav Links-->
+            <ul class="hidden text-white">
+              <li><a href="#">About</a></li>
+              <li><a href="#">Careers</a></li>
+              <li><a href="#">Events</a></li>
+              <li><a href="#">Products</a></li>
+              <li><a href="#">Support</a></li>
+            </ul>
+          </nav>
+        </div>
+        <!--Hero Title-->
+        <div class=" p-5 leading-none grid col-start-1 row-start-1 self-center justify-self-center border-white border-2">
+          <h1 class="font-josefin uppercase text-[2.5rem] text-white sm:text-6xl">Immersive experiences that deliver</h1>
+        </div>
+      </div>
+    </header>
+    <!--"Interactive" Section-->
+    <section>
+      <div class="mx-6 my-24 text-center grid gap-12">
+        <img src="./images/mobile/image-interactive.jpg" alt="image-interactive-mobile">
+        <div class="mx-6 grid gap-6">
+          <h2 class="font-josefin uppercase text-[2rem] sm:text-6xl leading-none">The leader in interactive VR</h2>
+          <p class="text-dark-gray">Founded in 2011, Loopstudios has been producing world-class virtual reality
+            projects for some of the best companies around the globe. Our award-winning
+            creations have transformed businesses through digital experiences that bind
+            to their brand.</p>
+        </div>
+      </div>
+    </section>
+    <!--Creations Section-->
+    <section>
+      <div class="grid gap-6 m-6 mb-3">
+        <!--Creations Title-->
+        <h2 class="font-josefin uppercase text-[2rem] text-center mb-5">Our Creations</h2>
+        <!--Gallery-->
+        <div class="grid">
+          <img class="grid brightness-75 sm:hidden col-start-1 row-start-1" src="./images/mobile/image-deep-earth.jpg"
+            alt="image-deep-earth-mobile">
+          <h3 class="font-josefin text-2xl uppercase text-white leading-none z-50 pb-6 pl-6 w-1/2 grid col-start-1 row-start-1 self-end">Deep Earth</h3>
+        </div>
+        <div class="grid">
+          <img class="grid brightness-75 sm:hidden col-start-1 row-start-1" src="./images/mobile/image-night-arcade.jpg"
+            alt="image-night-arcade-mobile">
+          <h3 class="font-josefin text-2xl uppercase text-white leading-none z-50 pb-6 pl-6 w-1/2 grid col-start-1 row-start-1 self-end">Night Arcade</h3>
+        </div>
+        <div class="grid">
+          <img class="grid brightness-75 sm:hidden col-start-1 row-start-1" src="./images/mobile/image-soccer-team.jpg"
+            alt="image-soccer-team-mobile">
+          <h3 class="font-josefin text-2xl uppercase text-white leading-none z-50 pb-6 pl-6 w-1/2 grid col-start-1 row-start-1 self-end">Soccer team VR</h3>
+        </div>
+        <div class="grid">
+          <img class="grid brightness-75 sm:hidden col-start-1 row-start-1" src="./images/mobile/image-grid.jpg"
+            alt="image-grid-mobile">
+          <h3 class="font-josefin text-2xl uppercase text-white leading-none z-50 pb-6 pl-6 w-1/2 grid col-start-1 row-start-1 self-end">The grid</h3>
+        </div>
+        <div class="grid">
+          <img class="grid brightness-75 sm:hidden col-start-1 row-start-1" src="./images/mobile/image-from-above.jpg" alt="image-from-above-mobile">
+          <h3 class="font-josefin text-2xl uppercase text-white leading-none z-50 pb-6 pl-6 w-1/2 grid col-start-1 row-start-1 self-end">From up above VR</h3>
+        </div>
+        <div class="grid">
+          <img class="grid brightness-75 sm:hidden col-start-1 row-start-1" src="./images/mobile/image-pocket-borealis.jpg"
+            alt="image-pocket-borealis-mobile">
+          <h3 class="font-josefin text-2xl uppercase text-white leading-none z-50 pb-6 pl-6 w-1/2 grid col-start-1 row-start-1 self-end">Pocket borealis</h3>
+        </div>
+        <div class="grid">
+          <img class="grid brightness-75 sm:hidden col-start-1 row-start-1" src="./images/mobile/image-curiosity.jpg"
+            alt="image-curiosity-mobile">
+          <h3 class="font-josefin text-2xl uppercase text-white leading-none z-50 pb-6 pl-6 w-1/2 grid col-start-1 row-start-1 self-end">The curiosity</h3>
+        </div>
+        <div class="grid">
+          <img class="grid brightness-75 sm:hidden col-start-1 row-start-1" src="./images/mobile/image-fisheye.jpg"
+            alt="image-fisheye=mobile">
+          <h3 class="font-josefin text-2xl uppercase text-white leading-none z-50 pb-6 pl-6 w-1/2 grid col-start-1 row-start-1 self-end">Make it fisheye</h3>
+        </div>
+        <!--See All Button-->
+        <div class="justify-self-center">
+          <button class=" tracking-[.3em] uppercase border-2 border-black w-[160px] h-[40px]">See All</button>
+        </div>
+      </div>
+    </section>
+  </main>
+  <!--Footer-->
+  <footer>
+    <div class="bg-black text-white grid justify-center text-center pt-12">
+      <div class="justify-self-center">
+        <img class="h-[24px] sm:h-auto" src="./images/logo.svg" alt="logo">
+      </div>
+      <ul class="grid gap-6 my-8 leading-none">
+        <li><a href="#">About</a></li>
+        <li><a href="#">Careers</a></li>
+        <li><a href="#">Events</a></li>
+        <li><a href="#">Products</a></li>
+        <li><a href="#">Support</a></li>
+      </ul>
+      <div class="flex gap-4 py-4 justify-self-center">
+        <img src="./images/icon-facebook.svg" alt="icon-facebook">
+        <img src="./images/icon-twitter.svg" alt="icon-twitter">
+        <img src="./images/icon-pinterest.svg" alt="icon-pinterest">
+        <img src="./images/icon-instagram.svg" alt="icon-instagram">
+      </div>
+      <div>
+        <p class="text-dark-gray">© 2021 Loopstudios. All rights reserved.</p>
+      </div>
+      <div class="text-xs">
+        Challenge by <a class="text-blue-500 underline" href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+        Coded by <a class="text-blue-500 underline" href="#">Your Name Here</a>.
+      </div>
+    </div>
+  </footer>
 </body>
 </html>
