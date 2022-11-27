@@ -17,3 +17,4 @@ I will seperate each challenge by difficulty based on this scaling.
 # Links to Completed Challenges
 
 - [Product preview card component](https://llxovell.github.io/frontend-mentor-challenges/product-preview-card-component-main/home/)
+- [3 column preview card component](https://llxovell.github.io/frontend-mentor-challenges/3-column-preview-card-component-main)
