@@ -12,15 +12,15 @@
   <link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Lexend+Deca&display=swap"
     rel="stylesheet">
 </head>
-<body class="font-lexend text-normal flex flex-col items-center justify-center h-screen bg-very-light-gray">
+<body class="font-lexend text-normal pt-20 pb-16 mx-6 md:flex md:flex-col md:items-center md:justify-center md:h-screen bg-very-light-gray">
   <!--Card Component-->
   <main>
     <!--Card-->
-    <div class="text-transparent-white flex w-[918px] rounded-lg overflow-hidden">
+    <div class="text-transparent-white md:flex md:max-w-[918px] rounded-lg overflow-hidden">
       <!--Sedans Column-->
-      <div class="bg-bright-orange p-12 grid gap-[84px]">
+      <div class="bg-bright-orange p-12 grid gap-6 md:gap-[80px]">
         <!--Sedans Content-->
-        <div class="grid gap-[34px] w-[210px]">
+        <div class="grid gap-[34px] md:max-w-[210px]">
           <img src="./images/icon-sedans.svg" alt="icon-sedans">
           <h1 class="text-very-light-gray font-bigshoulders text-[2.5rem] uppercase leading-none">Sedans</h1>
           <p class="leading-6">Choose a sedan for its affordability and excellent fuel economy. Ideal for cruising in the city 
@@ -28,13 +28,13 @@
         </div>
         <!--Sedans Button-->
         <div>
-          <button class="border-very-light-gray border-2 w-[150px] h-[50px] rounded-full">Learn More</button>
+          <button class="text-bright-orange bg-very-light-gray hover:text-very-light-gray hover:bg-transparent border-very-light-gray border-2 w-[150px] h-[50px] rounded-full">Learn More</button>
         </div>
       </div>
       <!--SUVs Column-->
-      <div class="bg-dark-cyan p-12 grid gap-[84px]">
+      <div class="bg-dark-cyan p-12 grid gap-6 md:gap-[80px]">
         <!--SUVs Content-->
-        <div class="grid gap-[34px] w-[210px]">
+        <div class="grid gap-[34px] md:max-w-[210px]">
           <img src="./images/icon-suvs.svg" alt="icon-suvs">
           <h2 class="text-very-light-gray font-bigshoulders text-[2.5rem] uppercase leading-[3rem]">SUVs</h2>
           <p class="leading-6">Take an SUV for its spacious interior, power, and versatility. Perfect for your next family vacation 
@@ -42,13 +42,13 @@
         </div>
         <!--SUVs Button-->
         <div>
-          <button class="border-very-light-gray border-2 w-[150px] h-[50px] rounded-full">Learn More</button>
+          <button class="text-dark-cyan bg-very-light-gray hover:text-very-light-gray hover:bg-transparent border-very-light-gray border-2 w-[150px] h-[50px] rounded-full">Learn More</button>
         </div>
       </div>
       <!--Luxary Column-->
-      <div class="bg-very-dark-cyan p-12 grid gap-[84px]">
+      <div class="bg-very-dark-cyan p-12 grid gap-6 md:gap-[80px]">
         <!--Luxary Content-->
-        <div class="grid gap-[34px] w-[210px]">
+        <div class="grid gap-[34px] md:max-w-[210px]">
           <img src="./images/icon-luxury.svg" alt="icon-luxury">
           <h2 class="text-very-light-gray font-bigshoulders text-[2.5rem] uppercase leading-[3rem]">Luxary</h2>
           <p class="leading-6">Cruise in the best car brands without the bloated prices. Enjoy the enhanced comfort of a luxury 
@@ -56,12 +56,12 @@
         </div>
         <!--Luxary Button-->
         <div>
-          <button class="border-very-light-gray border-2 w-[150px] h-[50px] rounded-full">Learn More</button>
+          <button class="text-very-dark-cyan bg-very-light-gray hover:text-very-light-gray hover:bg-transparent border-very-light-gray border-2 w-[150px] h-[50px] rounded-full">Learn More</button>
         </div>
       </div>
     </div>
   </main>
-  <footer>
+  <footer class="text-[.75rem] text-center mt-1">
     Challenge by <a class="text-blue-500 underline" href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
     Coded by <a class="text-blue-500 underline" href="https://llxovell.github.io/my-portfolio/">Levell Mack</a>.
   </footer>
