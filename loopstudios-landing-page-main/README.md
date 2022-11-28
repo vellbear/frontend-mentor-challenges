@@ -23,7 +23,7 @@ See hover states for all interactive elements on the page
 
 ### Links
 
-- Solution URL: [3 Column Preview Card Component](https://llxovell.github.io/frontend-mentor-challenges/loopstudios-landing-page-main/)
+- Solution URL: [Loopstudios Landing Page](https://llxovell.github.io/frontend-mentor-challenges/loopstudios-landing-page-main/)
 
 ## My process
 
