@@ -12,21 +12,25 @@
   <link href="https://fonts.googleapis.com/css2?family=Alata&family=Josefin+Sans:wght@300&display=swap" rel="stylesheet">
 </head>
 <body class="font-alata font-normal text-normal">
-  <main>
+  <main class="mx-auto max-w-[1440px]">
     <!--Hero-->
     <header class="grid">
       <!--Background Image-->
       <img class="grid col-start-1 row-start-1 sm:hidden" src="./images/mobile/image-hero.jpg" alt="hero-mobile">
-      <div class="grid col-start-1 row-start-1 m-6">
+      <img class="hidden col-start-1 row-start-1 sm:grid brightness-50" src="./images/desktop/image-hero.jpg" alt="hero">
+      <div class="grid col-start-1 row-start-1 m-6 sm:my-0 sm:mx-48 z-50">
         <!--Navbar-->
-        <div class="grid col-start-1 row-start-1 mt-6">
-          <nav>
+        <div class="grid h-max col-start-1 row-start-1 mt-6 sm:mt-0">
+          <nav class="flex items-center sm:mt-20">
             <!--Logo-->
             <div>
               <img class="h-[24px] sm:h-auto" src="./images/logo.svg" alt="logo">
             </div>
+            <div class="sm:hidden cursor-pointer ml-auto">
+              <img src="./images/icon-hamburger.svg" alt="icon-hamburger">
+            </div>
             <!--Nav Links-->
-            <ul class="hidden text-white">
+            <ul class="hidden sm:flex sm:gap-6 ml-auto text-white">
               <li><a href="#">About</a></li>
               <li><a href="#">Careers</a></li>
               <li><a href="#">Events</a></li>
@@ -36,17 +40,18 @@
           </nav>
         </div>
         <!--Hero Title-->
-        <div class=" p-5 leading-none grid col-start-1 row-start-1 self-center justify-self-center border-white border-2">
+        <div class="p-5 h-fit sm:mt-[225px] sm:p-12 sm:w-[630px] leading-none grid col-start-1 row-start-1 sm:justify-self-start sm:self-auto self-center justify-self-center border-white border-2">
           <h1 class="font-josefin uppercase text-[2.5rem] text-white sm:text-6xl">Immersive experiences that deliver</h1>
         </div>
       </div>
     </header>
     <!--"Interactive" Section-->
     <section>
-      <div class="mx-6 my-24 text-center grid gap-12">
-        <img src="./images/mobile/image-interactive.jpg" alt="image-interactive-mobile">
-        <div class="mx-6 grid gap-6">
-          <h2 class="font-josefin uppercase text-[2rem] sm:text-6xl leading-none">The leader in interactive VR</h2>
+      <div class="mx-6 sm:mx-[150px] sm:mt-48 my-24 text-center grid gap-12 sm:grid-flow-col sm:text-left">
+        <img class="sm:hidden" src="./images/mobile/image-interactive.jpg" alt="image-interactive-mobile">
+        <img class="hidden sm:inline-block w-fit sm:col-start-1 sm:row-start-1" src="./images/desktop/image-interactive.jpg" alt="image-interactive">
+        <div class="mx-6 grid gap-6 sm:m-0 sm:self-end sm:justify-self-end sm:pr-6 sm:pl-24 sm:pt-24 sm:w-1/2 sm:h-fit sm:col-start-1 sm:row-start-1 sm:bg-white">
+          <h2 class="font-josefin uppercase text-[2rem] sm:text-[3rem] leading-none">The leader in interactive VR</h2>
           <p class="text-dark-gray">Founded in 2011, Loopstudios has been producing world-class virtual reality
             projects for some of the best companies around the globe. Our award-winning
             creations have transformed businesses through digital experiences that bind
@@ -128,9 +133,9 @@
       <div>
         <p class="text-dark-gray">© 2021 Loopstudios. All rights reserved.</p>
       </div>
-      <div class="text-xs">
+      <div class="text-xs py-6">
         Challenge by <a class="text-blue-500 underline" href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
-        Coded by <a class="text-blue-500 underline" href="#">Your Name Here</a>.
+        Coded by <a class="text-blue-500 underline" href="https://llxovell.github.io/my-portfolio/">Levell Mack</a>.
       </div>
     </div>
   </footer>
