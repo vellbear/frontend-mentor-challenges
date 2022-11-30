@@ -5,10 +5,14 @@ import Carousel from "../components/Carousel";
 import ProductContent from "../components/ProductContent";
 import Quantity from "../components/Quantity";
 import AddToCartButton from "../components/AddToCartButton";
+import CartModal from "../components/CartModal";
+import MenuSidebar from "../components/MenuSidebar";
 ---
 
 <Layout title="E-commerce product page | Frontend Mentor | Levell Mack">
-  <main>
+  <CartModal />
+  <MenuSidebar />
+  <main class="">
     <Navbar />
     <Carousel client:load />
     <ProductContent />

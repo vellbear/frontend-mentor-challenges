@@ -15,7 +15,7 @@ function Navbar() {
   }
 
   return (
-    <div className="bg-white py-[1.375rem] px-6 pb-[1.5rem]">
+    <div className="bg-white py-[1.375rem] px-6 pb-[1.5rem] w-full">
       <nav>
         <div className="flex">
           <div className="flex gap-4">
