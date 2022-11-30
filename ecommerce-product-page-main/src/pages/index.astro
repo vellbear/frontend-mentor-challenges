@@ -7,20 +7,18 @@ import Quantity from "../components/Quantity";
 import AddToCartButton from "../components/AddToCartButton";
 import CartModal from "../components/CartModal";
 import MenuSidebar from "../components/MenuSidebar";
+import Footer from "../components/Footer";
 ---
 
 <Layout title="E-commerce product page | Frontend Mentor | Levell Mack">
-  <CartModal />
-  <MenuSidebar />
+  <CartModal client:load/>
+  <MenuSidebar client:load />
   <main class="">
-    <Navbar />
+    <Navbar client:load />
     <Carousel client:load />
     <ProductContent />
     <Quantity />
     <AddToCartButton />
   </main>
-  <div class="attribution absolute bottom-2 hidden">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Levell Mack</a>.
-  </div>
+  <Footer />
 </Layout>

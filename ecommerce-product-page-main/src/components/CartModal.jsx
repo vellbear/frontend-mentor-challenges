@@ -1,10 +1,14 @@
 import React from "react";
+import { useStore } from "@nanostores/react";
+import { showCart } from "../stores/cartStore";
 
-function CartModal(props) {
+function CartModal() {
+  const $showCart = useStore(showCart);
+
   return (
     <div
-      className="z-40 fixed w-[360px] right-2 mt-2 bg-white rounded-xl shadow-lg"
-      style={{ display: `${props.showModal ? "inline-block" : "none"}` }}
+      className="z-40 fixed w-[360px] right-2 mt-2 top-[68px] bg-white rounded-xl shadow-lg"
+      style={{ display: `${$showCart ? "inline-block" : "none"}` }}
     >
       <div className="border-b-[1px] border-blue-300 py-6 pl-6">
         <h3 className="font-bold leading-none">Cart</h3>

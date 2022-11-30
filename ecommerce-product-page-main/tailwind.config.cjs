@@ -11,6 +11,7 @@ module.exports = {
       "blue-200": "hsl(223, 64%, 98%)",
       white: "#FFFFFF",
       black: "hsla(0,0%,0%,.75)", //use 75% opacity
+      link: "#0000FF",
     },
     extend: {
       fontFamily: {

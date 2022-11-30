@@ -1,15 +1,18 @@
-import { useState } from "react";
+import { useStore } from "@nanostores/react";
+import { showMenu } from "../stores/menuStore.js";
 
-function MenuSidebar(props) {
+function MenuSidebar() {
+  const $showMenu = useStore(showMenu);
   return (
     <div
       className="z-50 fixed h-screen w-full bg-black"
-      style={{ display: `${props.showMenu ? "inline-block" : "none"}` }}
+      style={{ display: `${$showMenu ? "inline-block" : "none"}` }}
     >
       <div className="h-full w-[250px] p-6 bg-white">
         <div
+          className="cursor-pointer"
           onClick={() => {
-            props.setShowMenu(false);
+            showMenu.set(!$showMenu);
           }}
         >
           <svg width="14" height="15" xmlns="http://www.w3.org/2000/svg">
@@ -20,12 +23,14 @@ function MenuSidebar(props) {
             />
           </svg>
         </div>
-        <div className="grid gap-[1.875rem] ml-[2px] font-bold pt-14 tracking-wider leading-none">
-          <h3>Collections</h3>
-          <h3>Men</h3>
-          <h3>Women</h3>
-          <h3>About</h3>
-          <h3>Contact</h3>
+        <div className=" ml-[2px] font-bold pt-14 tracking-wider leading-none">
+          <ul className="grid gap-[1.875rem]">
+            <li>Collections</li>
+            <li>Men</li>
+            <li>Women</li>
+            <li>About</li>
+            <li>Contact</li>
+          </ul>
         </div>
       </div>
     </div>
