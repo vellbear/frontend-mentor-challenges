@@ -1,22 +1,28 @@
 import React from "react";
+import CartItem from "./CartItem";
 import { useStore } from "@nanostores/react";
 import { showCart } from "../stores/cartStore";
+import { quantity } from "../stores/cartStore";
 
 function CartModal() {
   const $showCart = useStore(showCart);
-
+  const $quantity = useStore(quantity);
   return (
     <div
-      className="z-40 fixed w-[360px] right-2 mt-2 top-[68px] bg-white rounded-xl shadow-lg"
+      className="z-40 absolute w-[360px] right-2 mt-2 top-[68px] bg-white rounded-xl shadow-lg"
       style={{ display: `${$showCart ? "inline-block" : "none"}` }}
     >
       <div className="border-b-[1px] border-blue-300 py-6 pl-6">
         <h3 className="font-bold leading-none">Cart</h3>
       </div>
       <div className="min-h-[190px] grid items-center">
-        <span className="text-center font-bold text-blue-400">
-          Your cart is empty.
-        </span>
+        {$quantity > 0 ? (
+          <CartItem />
+        ) : (
+          <span className="text-center font-bold text-blue-400">
+            Your cart is empty.
+          </span>
+        )}
       </div>
     </div>
   );
