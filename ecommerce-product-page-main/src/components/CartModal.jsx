@@ -2,13 +2,12 @@ import React from "react";
 import CartItem from "./CartItem";
 import { useStore } from "@nanostores/react";
 import { showCart } from "../stores/cartStore";
-import { quantity } from "../stores/cartStore";
-import { addToCart } from "../stores/cartStore";
+import { totalQuantity } from "../stores/cartStore";
 
 function CartModal() {
   const $showCart = useStore(showCart);
-  const $quantity = useStore(quantity);
-  const $addToCart = useStore(addToCart);
+  const $totalQuantity = useStore(totalQuantity);
+
   return (
     <div
       className="z-40 absolute w-[360px] right-2 mt-2 top-[68px] bg-white rounded-xl shadow-lg"
@@ -18,7 +17,7 @@ function CartModal() {
         <h3 className="font-bold leading-none">Cart</h3>
       </div>
       <div className="min-h-[190px] grid items-center">
-        {$quantity > 0 && $addToCart ? (
+        {$totalQuantity > 0 ? (
           <CartItem />
         ) : (
           <span className="text-center font-bold text-blue-400">

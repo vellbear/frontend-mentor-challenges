@@ -2,60 +2,58 @@ import React from "react";
 import { useStore } from "@nanostores/react";
 import { showMenu } from "../stores/menuStore.js";
 import { showCart } from "../stores/cartStore.js";
+import { totalQuantity } from "../stores/cartStore.js";
 
 function Navbar() {
   const $showMenu = useStore(showMenu);
   const $showCart = useStore(showCart);
-
-  function NavImage(props) {
-    return (
-      <div className={`cursor-pointer ${props.class}`}>
-        <img
-          src={props.src}
-          alt={props.alt}
-          height={props.height}
-          width={props.width}
-        />
-      </div>
-    );
-  }
+  const $totalQuantity = useStore(totalQuantity);
 
   return (
-    <div className="bg-white py-[1.375rem] px-6 pb-[1.5rem] w-full">
+    <div className="bg-white py-5 px-6 pb-[1.5rem] w-full">
       <nav>
         <div className="flex">
           <div className="flex gap-4">
-            <div
+            <button
               onClick={() => {
                 showMenu.set(!$showMenu);
               }}
             >
-              <NavImage
-                class="mt-[2px]"
-                src="/images/icon-menu.svg"
-                alt="icon-menu"
-                className="mt-12"
-              />
-            </div>
+              <img src="/images/icon-menu.svg" alt="icon-menu" />
+            </button>
             <a href="#">
-              <NavImage class="-mt-[2px]" src="/images/logo.svg" alt="logo" />
+              <img src="/images/logo.svg" alt="logo" />
             </a>
           </div>
           <div className="flex gap-[1.375rem] ml-auto">
-            <div
+            <button
               onClick={() => {
                 showCart.set(!$showCart);
               }}
             >
-              <NavImage src="/images/icon-cart.svg" alt="icon-cart" />
-            </div>
-            <NavImage
-              class="-mt-[2px]"
-              src="/images/image-avatar.png"
-              alt="image-avatar"
-              height="24px"
-              width="24px"
-            />
+              <div className="grid relative">
+                {$totalQuantity > 0 ? (
+                  <div className="grid place-content-center absolute -top-1 -right-1 bg-orange-500 h-3 w-3 rounded-full z-10">
+                    <p className="text-[.5rem] font-bold">
+                      {$totalQuantity ? $totalQuantity : 0}
+                    </p>
+                  </div>
+                ) : (
+                  <></>
+                )}
+                <div>
+                  <img src="/images/icon-cart.svg" alt="icon-cart" />
+                </div>
+              </div>
+            </button>
+            <button>
+              <img
+                src="/images/image-avatar.png"
+                alt="image-avatar"
+                height="24px"
+                width="24px"
+              />
+            </button>
           </div>
         </div>
       </nav>

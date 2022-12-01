@@ -4,6 +4,6 @@ const showCart = atom(false);
 
 const quantity = atom(0);
 
-const addToCart = atom(false);
+const totalQuantity = atom(0);
 
-export { showCart, quantity, addToCart };
+export { showCart, quantity, totalQuantity };

@@ -1,11 +1,12 @@
 import React from "react";
 import { useStore } from "@nanostores/react";
-import { addToCart } from "../stores/cartStore";
-import { showCart } from "../stores/cartStore";
+import { totalQuantity } from "../stores/cartStore";
+import { quantity } from "../stores/cartStore";
 
 function Button(props) {
-  const $addToCart = useStore(addToCart);
-  const $showCart = useStore(showCart);
+  const $quantity = useStore(quantity);
+  const $totalQuantity = useStore(totalQuantity);
+
   return (
     <div
       className="my-5 text-white font-bold"
@@ -17,8 +18,7 @@ function Button(props) {
       <button
         onClick={() => {
           if (!props.updateCart) return;
-          showCart.set(true);
-          addToCart.set(true);
+          totalQuantity.set($quantity + $totalQuantity);
         }}
         className="flex gap-4 items-center justify-center bg-orange-500 w-full rounded-lg h-[56px]"
       >

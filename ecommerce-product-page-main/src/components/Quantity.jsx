@@ -1,13 +1,9 @@
 import React from "react";
 import { useStore } from "@nanostores/react";
 import { quantity } from "../stores/cartStore";
-import { addToCart } from "../stores/cartStore";
-import { showCart } from "../stores/cartStore";
 
 function Quantity() {
   const $quantity = useStore(quantity);
-  const $addToCart = useStore(addToCart);
-  const $showCart = useStore(showCart);
 
   function increaseQuantity() {
     quantity.set($quantity + 1);
@@ -33,8 +29,6 @@ function Quantity() {
           <ChangeQuantityButton
             onClick={() => {
               decreaseQuantity();
-              showCart.set(false);
-              addToCart.set(false);
             }}
             src="/images/icon-minus.svg"
             alt="icon-minus"
@@ -47,8 +41,6 @@ function Quantity() {
           <ChangeQuantityButton
             onClick={() => {
               increaseQuantity();
-              showCart.set(false);
-              addToCart.set(false);
             }}
             class="ml-auto"
             src="/images/icon-plus.svg"
