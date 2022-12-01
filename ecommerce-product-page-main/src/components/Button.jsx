@@ -1,6 +1,11 @@
 import React from "react";
+import { useStore } from "@nanostores/react";
+import { addToCart } from "../stores/cartStore";
+import { showCart } from "../stores/cartStore";
 
-function AddToCartButton(props) {
+function Button(props) {
+  const $addToCart = useStore(addToCart);
+  const $showCart = useStore(showCart);
   return (
     <div
       className="my-5 text-white font-bold"
@@ -9,7 +14,14 @@ function AddToCartButton(props) {
         marginRight: props.marginRight ? props.marginRight : "1.5rem",
       }}
     >
-      <button className="flex gap-4 items-center justify-center bg-orange-500 w-full rounded-lg h-[56px]">
+      <button
+        onClick={() => {
+          if (!props.updateCart) return;
+          showCart.set(true);
+          addToCart.set(true);
+        }}
+        className="flex gap-4 items-center justify-center bg-orange-500 w-full rounded-lg h-[56px]"
+      >
         {props.icon ? (
           props.icon
         ) : (
@@ -27,4 +39,4 @@ function AddToCartButton(props) {
   );
 }
 
-export default AddToCartButton;
+export default Button;

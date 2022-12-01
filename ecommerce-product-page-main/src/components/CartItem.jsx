@@ -26,7 +26,7 @@ function CartItem() {
             </span>
           </p>
         </div>
-        <div>
+        <div onClick={() => quantity.set(0)}>
           <img src="/images/icon-delete.svg" alt="icon-delete" />
         </div>
       </div>

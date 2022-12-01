@@ -1,9 +1,13 @@
 import React from "react";
 import { useStore } from "@nanostores/react";
 import { quantity } from "../stores/cartStore";
+import { addToCart } from "../stores/cartStore";
+import { showCart } from "../stores/cartStore";
 
 function Quantity() {
   const $quantity = useStore(quantity);
+  const $addToCart = useStore(addToCart);
+  const $showCart = useStore(showCart);
 
   function increaseQuantity() {
     quantity.set($quantity + 1);
@@ -27,7 +31,11 @@ function Quantity() {
       <div className="flex px-6 h-[45px] bg-blue-200 items-center justify-between w-full rounded-lg">
         <div className="h-3 w-3 grid self-center">
           <ChangeQuantityButton
-            onClick={() => decreaseQuantity()}
+            onClick={() => {
+              decreaseQuantity();
+              showCart.set(false);
+              addToCart.set(false);
+            }}
             src="/images/icon-minus.svg"
             alt="icon-minus"
           />
@@ -37,7 +45,11 @@ function Quantity() {
         </div>
         <div className="h-3 w-3 grid self-center">
           <ChangeQuantityButton
-            onClick={() => increaseQuantity()}
+            onClick={() => {
+              increaseQuantity();
+              showCart.set(false);
+              addToCart.set(false);
+            }}
             class="ml-auto"
             src="/images/icon-plus.svg"
             alt="icon-plus"
