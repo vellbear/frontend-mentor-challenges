@@ -8,7 +8,7 @@ function Thumbnail(props) {
     <button
       key={$index}
       onClick={() => index.set(props.index)}
-      className="h-[90px] w-[90px] rounded-xl overflow-hidden"
+      className="h-[90px] w-[90px] rounded-xl overflow-hidden bg-white"
       style={{
         outline:
           $index === props.index ? "2px solid hsl(26, 100%, 55%)" : "none",
@@ -17,7 +17,9 @@ function Thumbnail(props) {
       <img
         src={props.src}
         alt={props.alt}
-        style={{ opacity: $index === props.index ? "30%" : "100%" }}
+        style={{
+          filter: $index === props.index ? "opacity(30%)" : "opacity(100%)",
+        }}
       />
     </button>
   );

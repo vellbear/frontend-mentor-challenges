@@ -5,19 +5,18 @@ import ChangeProductButton from "./ChangeProductButton";
 import ThumbnailList from "./ThumbnailList";
 
 function Lightbox() {
+  const $showLightbox = useStore(showLightbox);
   const $index = useStore(index);
   const $productImages = useStore(productImages);
-  const $showLightbox = useStore(showLightbox);
+
   return (
     <div
-      className="hidden sm:justify-center my-auto bg-black h-full w-full m-0 absolute left-0 top-0"
-      style={{ display: $showLightbox ? "grid" : "hidden" }}
+      className="sm:justify-center m-auto bg-black h-full w-full absolute left-0 top-0 z-50"
+      style={{ display: $showLightbox ? "grid" : "none" }}
     >
       <div className="h-fit self-center grid">
         <button
-          onClick={() => {
-            showLightbox.set(false);
-          }}
+          onClick={() => showLightbox.set(false)}
           className="justify-self-end self-end h-fit w-fit mb-6"
         >
           <img

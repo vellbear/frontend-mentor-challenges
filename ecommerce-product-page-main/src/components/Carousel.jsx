@@ -1,4 +1,3 @@
-import { useState } from "react";
 import { useStore } from "@nanostores/react";
 import { index, showLightbox, productImages } from "../stores/carouselStore";
 import ThumbnailList from "./ThumbnailList";

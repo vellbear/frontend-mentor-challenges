@@ -6,7 +6,7 @@ function MenuSidebar() {
   return (
     <div
       className="z-50 fixed h-screen w-full bg-black"
-      style={{ display: `${$showMenu ? "inline-block" : "none"}` }}
+      style={{ display: $showMenu ? "inline-block" : "none" }}
     >
       <div className="h-full w-[250px] p-6 bg-white">
         <button
