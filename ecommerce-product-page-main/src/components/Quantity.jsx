@@ -23,8 +23,8 @@ function Quantity() {
     );
   }
   return (
-    <div className="mx-6 mt-[18px] items-center">
-      <div className="flex px-6 h-[45px] bg-blue-200 items-center justify-between w-full rounded-lg">
+    <div className="mt-[18px] sm:mr-0 items-center">
+      <div className="flex px-6 h-[45px] sm:h-auto bg-blue-200 items-center justify-between w-full sm:w-[160px] rounded-lg">
         <div className="h-3 w-3 grid self-center">
           <ChangeQuantityButton
             onClick={() => {
@@ -34,7 +34,7 @@ function Quantity() {
             alt="icon-minus"
           />
         </div>
-        <div>
+        <div className="sm:py-[18px] sm:text-center">
           <p className="font-bold">{$quantity}</p>
         </div>
         <div className="h-3 w-3 grid self-center">

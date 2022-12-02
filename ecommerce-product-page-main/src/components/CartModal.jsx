@@ -10,7 +10,7 @@ function CartModal() {
 
   return (
     <div
-      className="z-40 absolute w-[360px] right-2 mt-2 top-[68px] bg-white rounded-xl shadow-lg"
+      className="z-40 absolute w-[360px] right-2 mt-2 top-[68px] sm:mt-4 sm:-right-[54px] bg-white rounded-xl shadow-lg"
       style={{ display: `${$showCart ? "inline-block" : "none"}` }}
     >
       <div className="border-b-[1px] border-blue-300 py-6 pl-6">

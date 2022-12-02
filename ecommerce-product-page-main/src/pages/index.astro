@@ -13,15 +13,20 @@ import Footer from "../components/Footer";
 <Layout title="E-commerce product page | Frontend Mentor | Levell Mack">
   <CartModal client:load/>
   <MenuSidebar client:load />
-  <main class="">
+  <header>
     <Navbar client:load />
-    <div class="">
-    <Carousel client:load />
-    <ProductContent />
-    <Quantity client:visible/>
-    <Button updateCart={true} client:load/>
+  </header>
+  <main class="">
+    <div class="sm:grid sm:grid-flow-col sm:my-[90px]">
+        <Carousel client:load />
+      <div class="sm:col-start-2 sm:mx-16 sm:my-auto">
+        <ProductContent />
+        <div class="sm:flex mx-6 sm:gap-5 sm:py-6">
+        <Quantity client:visible/>
+        <Button updateCart={true} client:visible/>
+        </div>  
+      </div>
     </div>
-    
   </main>
   <Footer />
 </Layout>

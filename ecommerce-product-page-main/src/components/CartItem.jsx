@@ -9,7 +9,7 @@ function CartItem() {
   return (
     <div className="h-full pl-6 pt-6 grid gap-2">
       <div className="flex gap-5 items-center">
-        <div>
+        <div className="rounded-md overflow-hidden">
           <img
             src="/images/image-product-1-thumbnail.jpg"
             alt="product-thumbnail"
@@ -26,11 +26,13 @@ function CartItem() {
             </span>
           </p>
         </div>
-        <div onClick={() => totalQuantity.set(0)}>
+        <div className="cursor-pointer" onClick={() => totalQuantity.set(0)}>
           <img src="/images/icon-delete.svg" alt="icon-delete" />
         </div>
       </div>
-      <Button title="Checkout" icon={true} marginLeft="0" />
+      <div className="mr-6">
+        <Button title="Checkout" icon={true} />
+      </div>
     </div>
   );
 }
