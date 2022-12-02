@@ -16,7 +16,7 @@ function Button(props) {
       className="flex gap-4 shadow-2xl items-center justify-center bg-orange-500 hover:bg-orange-200 w-full rounded-lg h-[56px] my-5 text-white font-bold"
       style={{
         boxShadow: props.updateCart
-          ? "1px 46px 44px -16px rgba(255,125,26,0.41);"
+          ? "0 15px 15px 0 rgba(255,125,26,0.41);"
           : "none",
       }}
     >

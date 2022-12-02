@@ -2,6 +2,7 @@ import { useState } from "react";
 
 function Carousel() {
   const [index, setIndex] = useState(0);
+  const [showLightbox, setShowLightbox] = useState(false);
 
   const productImages = [
     { src: "/images/image-product-1.jpg", alt: "product-1" },
@@ -27,10 +28,10 @@ function Carousel() {
     setIndex(newIndex);
   }
 
-  function ChangeProductButton(props) {
+  const ChangeProductButton = (props) => {
     return (
       <div
-        className={`bg-white rounded-full h-10 w-10 mx-4 grid sm:hidden place-content-center col-start-1 row-start-1 self-center cursor-pointer ${props.class}`}
+        className={`bg-white sm:hidden rounded-full h-10 w-10 mx-4 grid place-content-center col-start-1 row-start-1 self-center cursor-pointer ${props.class}`}
         onClick={props.onClick}
       >
         <button>
@@ -38,7 +39,8 @@ function Carousel() {
         </button>
       </div>
     );
-  }
+  };
+
   const Thumbnail = (props) => {
     return (
       <button
@@ -57,26 +59,9 @@ function Carousel() {
       </button>
     );
   };
-  return (
-    <div className="sm:px-6">
-      <div className="h-[300px] sm:h-[450px] sm:w-[450px] sm:rounded-2xl grid place-content-center overflow-hidden">
-        <img
-          className="col-start-1 row-start-1 transition-all ease-in-out duration-1000"
-          src={productImages[index].src}
-          alt={productImages[index].alt}
-        />
-        <ChangeProductButton
-          src="/images/icon-previous.svg"
-          alt="icon-previous"
-          onClick={() => increaseIndex()}
-        />
-        <ChangeProductButton
-          class="ml-auto"
-          src="/images/icon-next.svg"
-          alt="icon-next"
-          onClick={() => decreaseIndex()}
-        />
-      </div>
+
+  const ThumbnailList = () => {
+    return (
       <div className="hidden sm:flex gap-[30px] mt-8">
         <Thumbnail
           index={0}
@@ -99,7 +84,92 @@ function Carousel() {
           alt="product-4-thumbnail"
         />
       </div>
-    </div>
+    );
+  };
+
+  const Lightbox = () => {
+    return (
+      <div
+        className="hidden sm:justify-center my-auto bg-black h-full w-full m-0 absolute left-0 top-0"
+        style={{ display: showLightbox ? "grid" : "hidden" }}
+      >
+        <div className="h-fit self-center grid">
+          <button
+            onClick={() => {
+              setShowLightbox(false);
+            }}
+            className="justify-self-end self-end h-fit w-fit mb-6"
+          >
+            <img
+              src="/images/icon-close.svg"
+              alt="icon-close"
+              height="20px"
+              width="20px"
+            />
+          </button>
+          <div className="w-fit h-fit grid items-center">
+            <div className="rounded-xl overflow-hidden col-start-1 row-start-1">
+              <img
+                className="transition-all ease-in-out duration-1000"
+                src={productImages[index].src}
+                alt={productImages[index].alt}
+                height="450px"
+                width="450px"
+              />
+            </div>
+            <ChangeProductButton
+              src="/images/icon-previous.svg"
+              alt="icon-previous"
+              onClick={() => decreaseIndex()}
+            />
+            <ChangeProductButton
+              class="ml-auto"
+              src="/images/icon-next.svg"
+              alt="icon-next"
+              onClick={() => increaseIndex()}
+            />
+          </div>
+          <ThumbnailList />
+        </div>
+      </div>
+    );
+  };
+
+  return (
+    <>
+      <Lightbox />
+      <div className="sm:px-6">
+        <div className="h-[300px] sm:h-[450px] sm:w-[450px] sm:rounded-2xl grid place-content-center overflow-hidden">
+          <button
+            className="hidden sm:inline-block col-start-1 row-start-1"
+            onClick={() => setShowLightbox(true)}
+          >
+            <img
+              className="transition-all ease-in-out duration-1000"
+              src={productImages[index].src}
+              alt={productImages[index].alt}
+            />
+          </button>
+          <img
+            className="sm:hidden col-start-1 row-start-1 transition-all ease-in-out duration-1000"
+            src={productImages[index].src}
+            alt={productImages[index].alt}
+          />
+          <ChangeProductButton
+            src="/images/icon-previous.svg"
+            alt="icon-previous"
+            onClick={() => decreaseIndex()}
+          />
+          <ChangeProductButton
+            class="ml-auto"
+            src="/images/icon-next.svg"
+            alt="icon-next"
+            onClick={() => increaseIndex()}
+          />
+        </div>
+        <ThumbnailList />
+      </div>
+    </>
   );
 }
 
