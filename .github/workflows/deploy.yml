@@ -16,7 +16,7 @@ permissions:
   
 defaults:
   run:
-    working-directory: ecommerce-product-page-main
+    working-directory: ./ecommerce-product-page-main/
     
 jobs:
   build:
