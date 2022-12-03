@@ -8,15 +8,15 @@ on:
   # Allows you to run this workflow manually from the Actions tab on GitHub.
   workflow_dispatch:
   
-defaults:
-  run:
-    working-directory: ./eccommerce-product-page-main/
-  
 # Allow this job to clone the repo and create a page deployment
 permissions:
   contents: read
   pages: write
   id-token: write
+
+defaults:
+  run:
+    working-directory: ./eccommerce-product-page-main/
 
 jobs:
   build:
@@ -28,8 +28,8 @@ jobs:
         uses: withastro/action@v0
         with:
           node-version: 16
-          package-manager: 'npm'
-          path: ./eccomerce-product-page-main/package-lock.json
+          cache: 'npm'
+          cache-dependency-path: eccomerce-product-page-main/package-lock.json
 
 
   deploy:
