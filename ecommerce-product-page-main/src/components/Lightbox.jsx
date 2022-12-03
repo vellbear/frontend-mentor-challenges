@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { useStore } from "@nanostores/react";
 import { index, productImages, showLightbox } from "../stores/carouselStore";
 import ChangeProductButton from "./ChangeProductButton";
@@ -8,6 +8,7 @@ function Lightbox() {
   const $showLightbox = useStore(showLightbox);
   const $index = useStore(index);
   const $productImages = useStore(productImages);
+  const [isHoveredClose, setIsHoveredClose] = useState(false);
 
   return (
     <div
@@ -17,14 +18,24 @@ function Lightbox() {
       <div className="h-fit self-center grid">
         <button
           onClick={() => showLightbox.set(false)}
-          className="justify-self-end self-end h-fit w-fit mb-6"
+          onMouseEnter={() => setIsHoveredClose(true)}
+          onMouseLeave={() => setIsHoveredClose(false)}
+          className="justify-self-end self-end h-5 w-5 mb-6"
         >
+          <svg viewBox="0 0 15 15" xmlns="http://www.w3.org/2000/svg">
+            <path
+              d="m11.596.782 2.122 2.122L9.12 7.499l4.597 4.597-2.122 2.122L7 9.62l-4.595 4.597-2.122-2.122L4.878 7.5.282 2.904 2.404.782l4.595 4.596L11.596.782Z"
+              fill={isHoveredClose ? "hsl(26, 100%, 55%)" : "#69707D"}
+              fillRule="evenodd"
+            />
+          </svg>
+          {/*
           <img
             src="/images/icon-close.svg"
             alt="icon-close"
             height="20px"
             width="20px"
-          />
+  />*/}
         </button>
         <div className="w-fit h-fit grid items-center">
           <div className="rounded-xl overflow-hidden col-start-1 row-start-1">

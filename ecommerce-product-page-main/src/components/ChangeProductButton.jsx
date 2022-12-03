@@ -25,7 +25,7 @@ function ChangeProductButton(props) {
   }
   return (
     <div
-      className={`bg-white sm:hidden rounded-full h-10 w-10 mx-4 grid place-content-center col-start-1 row-start-1 self-center cursor-pointer ${props.class}`}
+      className={`bg-white rounded-full h-10 w-10 mx-4 grid place-content-center col-start-1 row-start-1 self-center cursor-pointer ${props.class}`}
       onClick={
         props.increment
           ? () => {

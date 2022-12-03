@@ -63,15 +63,9 @@ function Navbar() {
                   <></>
                 )}
                 <div
-                  onMouseEnter={() => {
-                    setisHovered(true);
-                  }}
-                  onMouseLeave={() => {
-                    setisHovered(false);
-                  }}
-                  onClick={() => {
-                    setisHovered(!isHovered);
-                  }}
+                  onMouseEnter={() => setisHovered(true)}
+                  onMouseLeave={() => setisHovered(false)}
+                  onClick={() => setisHovered(!isHovered)}
                 >
                   <svg
                     width="22"
@@ -85,7 +79,7 @@ function Navbar() {
                           ? "hsl(220, 13%, 13%)"
                           : "#69707D"
                       }
-                      fill-rule="nonzero"
+                      fillRule="nonzero"
                     />
                   </svg>
                 </div>

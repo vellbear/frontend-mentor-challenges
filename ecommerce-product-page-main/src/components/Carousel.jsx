@@ -22,24 +22,26 @@ function Carousel() {
               alt={$productImages[$index].alt}
             />
           </button>
-          <img
-            className="sm:hidden col-start-1 row-start-1 transition-all ease-in-out duration-1000"
-            src={$productImages[$index].src}
-            alt={$productImages[$index].alt}
-          />
-          <ChangeProductButton
-            src="/images/icon-previous.svg"
-            alt="icon-previous"
-            increment={true}
-            onClick={() => decreaseIndex()}
-          />
-          <ChangeProductButton
-            class="ml-auto"
-            src="/images/icon-next.svg"
-            alt="icon-next"
-            increment={false}
-            onClick={() => increaseIndex()}
-          />
+          <div className="grid sm:hidden">
+            <img
+              className="sm:hidden col-start-1 row-start-1 transition-all ease-in-out duration-1000"
+              src={$productImages[$index].src}
+              alt={$productImages[$index].alt}
+            />
+            <ChangeProductButton
+              src="/images/icon-previous.svg"
+              alt="icon-previous"
+              increment={true}
+              onClick={() => decreaseIndex()}
+            />
+            <ChangeProductButton
+              class="ml-auto"
+              src="/images/icon-next.svg"
+              alt="icon-next"
+              increment={false}
+              onClick={() => increaseIndex()}
+            />
+          </div>
         </div>
         <ThumbnailList />
       </div>
