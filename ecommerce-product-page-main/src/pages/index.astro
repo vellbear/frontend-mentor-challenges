@@ -8,7 +8,6 @@ import Button from "../components/Button";
 import CartModal from "../components/CartModal";
 import MenuSidebar from "../components/MenuSidebar";
 import Footer from "../components/Footer";
-import Lightbox from "../components/Lightbox";
 ---
 
 <Layout title="E-commerce product page | Frontend Mentor | Levell Mack">
@@ -17,14 +16,14 @@ import Lightbox from "../components/Lightbox";
   <header>
     <Navbar client:load />
   </header>
-  <main class="">
+  <main>
     <div class="sm:grid sm:grid-flow-col sm:my-[90px]">
         <Carousel client:load />
       <div class="sm:col-start-2 sm:mx-16 sm:my-auto">
         <ProductContent />
         <div class="sm:flex mx-6 sm:gap-5 sm:py-6">
-        <Quantity client:visible/>
-        <Button updateCart={true} client:visible/>
+          <Quantity client:visible/>
+          <Button updateCart={true} client:visible/>
         </div>  
       </div>
     </div>

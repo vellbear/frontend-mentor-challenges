@@ -1,11 +1,11 @@
-import React from "react";
+import React, { useState } from "react";
 import { useStore } from "@nanostores/react";
-import { index } from "../stores/carouselStore";
-import { productImages } from "../stores/carouselStore";
+import { index, productImages } from "../stores/carouselStore";
 
 function ChangeProductButton(props) {
   const $index = useStore(index);
   const $productImages = useStore(productImages);
+  const [isHovered, setIsHovered] = useState(false);
 
   function increaseIndex() {
     if ($index === $productImages.length - 1) {
@@ -24,8 +24,9 @@ function ChangeProductButton(props) {
     index.set(newIndex);
   }
   return (
-    <div
-      className={`bg-white rounded-full h-10 w-10 mx-4 grid place-content-center col-start-1 row-start-1 self-center cursor-pointer ${props.class}`}
+    <button
+      className={`bg-white rounded-full h-10 w-10 mx-4 grid place-content-center col-start-1 row-start-1 self-center ${props.class}`}
+      style={{ height: props.size, width: props.size }}
       onClick={
         props.increment
           ? () => {
@@ -35,11 +36,31 @@ function ChangeProductButton(props) {
               decreaseIndex();
             }
       }
+      onMouseEnter={() => setIsHovered(true)}
+      onMouseLeave={() => setIsHovered(false)}
     >
-      <button>
-        <img src={props.src} alt={props.alt} height="10px" width="10px" />
-      </button>
-    </div>
+      {props.next ? (
+        <svg viewBox="0 0 14 18" width="14" xmlns="http://www.w3.org/2000/svg">
+          <path
+            d="m2 1 8 8-8 8"
+            stroke={isHovered ? "hsl(26, 100%, 55%)" : "#1D2026"}
+            strokeWidth="3"
+            fill="none"
+            fillRule="evenodd"
+          />
+        </svg>
+      ) : (
+        <svg viewBox="0 0 14 18" width="14" xmlns="http://www.w3.org/2000/svg">
+          <path
+            d="M11 1 3 9l8 8"
+            stroke={isHovered ? "hsl(26, 100%, 55%)" : "#1D2026"}
+            strokeWidth="3"
+            fill="none"
+            fillRule="evenodd"
+          />
+        </svg>
+      )}
+    </button>
   );
 }
 

@@ -1,8 +1,7 @@
 import React, { useState } from "react";
 import { useStore } from "@nanostores/react";
 import { showMenu } from "../stores/menuStore.js";
-import { showCart } from "../stores/cartStore.js";
-import { totalQuantity } from "../stores/cartStore.js";
+import { showCart, totalQuantity } from "../stores/cartStore.js";
 
 function Navbar() {
   const $showMenu = useStore(showMenu);

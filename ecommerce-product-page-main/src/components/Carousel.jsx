@@ -11,7 +11,7 @@ function Carousel() {
   return (
     <>
       <div className="sm:px-6">
-        <div className="h-[300px] sm:h-[450px] sm:w-[450px] sm:rounded-2xl grid place-content-center overflow-hidden">
+        <div className="max-h-[300px] sm:max-h-[450px] sm:max-w-[450px] sm:rounded-2xl grid place-content-center overflow-hidden">
           <button
             className="hidden sm:inline-block col-start-1 row-start-1"
             onClick={() => showLightbox.set(true)}
@@ -28,19 +28,8 @@ function Carousel() {
               src={$productImages[$index].src}
               alt={$productImages[$index].alt}
             />
-            <ChangeProductButton
-              src="/images/icon-previous.svg"
-              alt="icon-previous"
-              increment={true}
-              onClick={() => decreaseIndex()}
-            />
-            <ChangeProductButton
-              class="ml-auto"
-              src="/images/icon-next.svg"
-              alt="icon-next"
-              increment={false}
-              onClick={() => increaseIndex()}
-            />
+            <ChangeProductButton increment={false} />
+            <ChangeProductButton class="ml-auto" next={true} increment={true} />
           </div>
         </div>
         <ThumbnailList />

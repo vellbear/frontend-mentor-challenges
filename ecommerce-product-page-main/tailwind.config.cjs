@@ -2,6 +2,9 @@
 module.exports = {
   content: ["./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}"],
   theme: {
+    screens: {
+      sm: "1000px",
+    },
     colors: {
       "orange-500": "hsl(26, 100%, 55%)",
       "orange-300": "hsl(25, 100%, 94%)",

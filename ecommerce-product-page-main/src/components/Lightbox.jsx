@@ -12,7 +12,7 @@ function Lightbox() {
 
   return (
     <div
-      className="sm:justify-center m-auto bg-black h-full w-full absolute left-0 top-0 z-50"
+      className="hidden sm:justify-center m-auto bg-black h-full w-full absolute left-0 top-0 z-50"
       style={{ display: $showLightbox ? "grid" : "none" }}
     >
       <div className="h-fit self-center grid">
@@ -29,13 +29,6 @@ function Lightbox() {
               fillRule="evenodd"
             />
           </svg>
-          {/*
-          <img
-            src="/images/icon-close.svg"
-            alt="icon-close"
-            height="20px"
-            width="20px"
-  />*/}
         </button>
         <div className="w-fit h-fit grid items-center">
           <div className="rounded-xl overflow-hidden col-start-1 row-start-1">
@@ -43,23 +36,23 @@ function Lightbox() {
               className="transition-all ease-in-out duration-1000"
               src={$productImages[$index].src}
               alt={$productImages[$index].alt}
-              height="450px"
-              width="450px"
+              height="550px"
+              width="550px"
             />
           </div>
-          <ChangeProductButton
-            src="/images/icon-previous.svg"
-            alt="icon-previous"
-            increment={true}
-          />
-          <ChangeProductButton
-            class="ml-auto"
-            src="/images/icon-next.svg"
-            alt="icon-next"
-            increment={false}
-          />
+          <div className="grid col-start-1 row-start-1 -mx-11">
+            <ChangeProductButton size="54px" increment={false} />
+            <ChangeProductButton
+              class="ml-auto"
+              size="54px"
+              next={true}
+              increment={true}
+            />
+          </div>
         </div>
-        <ThumbnailList />
+        <div className="justify-self-center">
+          <ThumbnailList />
+        </div>
       </div>
     </div>
   );
