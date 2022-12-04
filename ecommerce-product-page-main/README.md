@@ -41,6 +41,6 @@ Your users should be able to:
 
 ## Author
 
-- Website - [Levell Mack](https://llxovell.github.io/my-portfolio/) **W.I.P.**
+- Website - [Levell Mack](https://llxovell.github.io/) **W.I.P.**
 - Frontend Mentor - [@Llxovell](https://www.frontendmentor.io/profile/Llxovell)
 
