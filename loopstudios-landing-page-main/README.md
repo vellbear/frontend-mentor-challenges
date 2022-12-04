@@ -46,5 +46,5 @@ I'll add the mobile menu modal and the js for it soon.
 
 ## Author
 
-- Website - [Levell Mack](https://llxovell.github.io/my-portfolio/) **W.I.P.**
+- Website - [Levell Mack](https://llxovell.github.io/) **W.I.P.**
 - Frontend Mentor - [@Llxovell](https://www.frontendmentor.io/profile/Llxovell)
