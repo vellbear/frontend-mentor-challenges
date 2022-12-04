@@ -19,3 +19,4 @@ I will seperate each challenge by difficulty based on this scaling.
 - [Product Preview Card Component](https://llxovell.github.io/frontend-mentor-challenges/product-preview-card-component-main/home/)
 - [3 Column Preview Card Component](https://llxovell.github.io/frontend-mentor-challenges/3-column-preview-card-component-main)
 - [Loopstudios Landing Page](https://llxovell.github.io/frontend-mentor-challenges/loopstudios-landing-page-main/)
+- [Ecommerce Product Page](https://llxovell-eccomerce-product-page.netlify.app/)
