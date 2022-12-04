@@ -2,7 +2,7 @@ import React from "react";
 
 function Footer() {
   return (
-    <div class="absolute w-fit bottom-2 text-xs left-0 right-0 mx-auto">
+    <div className="absolute w-fit bottom-2 text-xs left-0 right-0 mx-auto">
       Challenge by{" "}
       <a
         className="text-link underline"
