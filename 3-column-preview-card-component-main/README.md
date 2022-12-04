@@ -48,5 +48,5 @@ I'm unlikely to work on this again in the future.
 
 ## Author
 
-- Website - [Levell Mack](https://llxovell.github.io/my-portfolio/) **W.I.P.**
+- Website - [Levell Mack](https://llxovell.github.io/) **W.I.P.**
 - Frontend Mentor - [@Llxovell](https://www.frontendmentor.io/profile/Llxovell)
